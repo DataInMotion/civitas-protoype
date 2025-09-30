@@ -14,11 +14,11 @@
     <package href="https://civitas.org/meter/source/1.0.0#/"/>
     <eclass href="https://civitas.org/meter/source/1.0.0#//Meter"/>
   </steps>
-  <steps xsi:type="scheduledloaderconfig:ScheduledLoaderConfig" pid="manual-readings" id="manual-readings" outputs="reading_attacher" repoTarget="(repo_id=manualReading)" loaderName="manual-readings">
+  <steps xsi:type="scheduledloaderconfig:ScheduledLoaderConfig" pid="manual-readings" id="manual-readings" outputs="meter_reading_attacher" repoTarget="(repo_id=manualReading)" loaderName="manual-readings">
     <package href="https://civitas.org/meter/source/1.0.0#/"/>
     <eclass href="https://civitas.org/meter/source/1.0.0#//Reading"/>
   </steps>
-  <steps xsi:type="scheduledloaderconfig:ScheduledLoaderConfig" pid="remote-readings" id="remote-readings" outputs="reading_attacher" repoTarget="(repo_id=remoteMeter)" loaderName="remote-readings">
+  <steps xsi:type="scheduledloaderconfig:ScheduledLoaderConfig" pid="remote-readings" id="remote-readings" outputs="meter_reading_attacher" repoTarget="(repo_id=remoteMeter)" loaderName="remote-readings">
     <package href="https://civitas.org/meter/source/1.0.0#/"/>
     <eclass href="https://civitas.org/meter/source/1.0.0#//RemoteReading"/>
   </steps>
@@ -44,13 +44,13 @@
     <eclassuri href="https://civitas.org/meter/source/1.0.0#//Meter"/>
   </steps>
   <steps xsi:type="datasinkconfig:EMFRepositoryDataSinkConfig" pid="intMeteringPointDataSink" id="intMeteringPointDataSink" inputs="meterToIntermediateMeteringPointQVT" outputs="sourceMeteringPointToTargetPlantQVT" repoTarget="(repo_id=inmem)"/>
-  <steps xsi:type="emfattacherconfig:EMFAttacherHandlerConfig" pid="reading_attacher" id="reading_attacher" outputs="sourceMeteringPointToTargetPlantQVT" inputs="manual-readings remote-readings" repoTarget="(repo_id=inmem)">
+  <steps xsi:type="emfattacherconfig:EMFAttacherHandlerConfig" pid="meter_reading_attacher" id="meter_reading_attacher" outputs="sourceMeteringPointToTargetPlantQVT" inputs="manual-readings remote-readings" repoTarget="(repo_id=inmem)">
     <targetEClassUri href="https://civitas.org/meter/source/1.0.0#//IntermediateMeteringPoint"/>
     <incomingEClassUri href="https://civitas.org/meter/source/1.0.0#//Reading"/>
     <targetReferenceUri href="https://civitas.org/meter/source/1.0.0#//IntermediateMeteringPoint/readings"/>
     <foreignKeyFeatureUri xsi:type="ecore:EAttribute" href="https://civitas.org/meter/source/1.0.0#//Reading/meterId"/>
   </steps>
-  <steps xsi:type="qvthandler:QVTHandlerConfig" pid="sourceMeteringPointToTargetPlantQVT" id="sourceMeteringPointToTargetPlantQVT" outputs="meteringPointAttacher" inputs="reading_attacher intMeteringPointDataSink" trafo="(transformator.id=sourceMeteringPointToTargetPlantQVT)">
+  <steps xsi:type="qvthandler:QVTHandlerConfig" pid="sourceMeteringPointToTargetPlantQVT" id="sourceMeteringPointToTargetPlantQVT" outputs="meteringPointAttacher" inputs="meter_reading_attacher intMeteringPointDataSink" trafo="(transformator.id=sourceMeteringPointToTargetPlantQVT)">
     <eclassuri href="https://civitas.org/meter/source/1.0.0#//IntermediateMeteringPoint"/>
   </steps>
   <steps xsi:type="emfattacherconfig:EMFAttacherHandlerConfig" pid="meteringPointAttacher" id="meteringPointAttacher" inputs="sourceMeteringPointToTargetPlantQVT" repoTarget="(repo_id=plantTarget)">
@@ -61,5 +61,5 @@
     <incomingReferenceUri href="https://civitas.org/meter/target/1.0.0#//Plant/meteringPoints"/>
   </steps>
   <steps xsi:type="datasinkconfig:EMFRepositoryDataSinkConfig" pid="plantDataSink" id="plantDataSink" inputs="plantQVT" repoTarget="(repo_id=plantTarget)" detailedLogging="true"/>
-  <components xsi:type="minioconfig:MinIOClientConfig" pid="minio" endpoint="http://minio:9000" accessKey="minio" secretKey="minio123"/>
+  <components xsi:type="minioconfig:MinIOClientConfig" pid="minio" accessKey="minio" secretKey="minio123"/>
 </pipeline:Pipeline>
