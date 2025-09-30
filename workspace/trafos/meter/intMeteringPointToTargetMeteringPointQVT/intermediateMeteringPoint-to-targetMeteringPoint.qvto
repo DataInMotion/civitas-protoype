@@ -39,7 +39,3 @@ mapping SOURCE::Reading::toTargetMeterReading(): TARGET::MeterReading {
 	timestamp := self.timestamp;
 }
 
-mapping SOURCE::IntermediateMeteringPoint::toTargetMeter(): TARGET::Meter {
-	id := self.meterId;
-}
-

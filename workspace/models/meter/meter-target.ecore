@@ -23,8 +23,6 @@
         eType="#//MeteringPoint" containment="true" eOpposite="#//MeteringPoint/plant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parts" upperBound="-1"
         eType="#//Parts" containment="true" eOpposite="#//Parts/plant"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="meter" upperBound="-1"
-        eType="#//Meter" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Net">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -56,11 +54,6 @@
         eOpposite="#//Plant/meteringPoints"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="meterReadings" upperBound="-1"
         eType="#//MeterReading" containment="true" eOpposite="#//MeterReading/meteringPoint"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Meter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serialNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeterReading">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
