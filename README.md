@@ -117,7 +117,9 @@ Für folgende Modelle wurde die Daten API aktiviert:
   * GLT Building Daten - http://localhost:8080/atlas/rest/glt/Building (Json: http://localhost:8080/atlas/rest/glt/Building?mediaType=application/json)
   * GLT Contact Daten - http://localhost:8080/atlas/rest/glt/Contact (Json:http://localhost:8080/atlas/rest/glt/Contact?mediaType=application/json )
   * GLT Mermaid - http://localhost:8080/atlas/rest/glt/documentation/html/mermaid
-  * GLT Datenschutz - http://localhost:8080/atlas/rest/models/gdpr?nsUri=https://civitas.org/glt/1.0.0 (hier werden die Modell-Annotation dargestellt, alle a)
+  * GLT Datenschutz - http://localhost:8080/atlas/rest/models/gdpr?nsUri=https://civitas.org/glt/1.0.0 
+    * Alle Datenschutz annotation sind mit entsprechenden Informationen versehen: *firstName*, *lastName*, *religion*
+    * In den Daten werden keine “*firstName*”, “*lastName*” nach außen geliefert. Die Attribute werden werden auf den Default zurückgesetzt
 * Meter:
   * Meter Target XMI - http://localhost:8080/glt/rest/target/
   * Meter Target Mermaid - http://localhost:8080/atlas/rest/target/documentation/html/mermaid
