@@ -236,9 +236,10 @@ Dieses Dokument beschreibt, wie die Anforderungen des Proof of Concept (PoC) "mo
 **42. 03.07 — Monitoring**
 
 - **Antwort:** Java Anwendung bieten umfassende Möglichkeiten zur Laufzeit-Introspektion und zum Monitoring. Diese können über Standard-Tools wie JMX an Monitoring-Systeme (z.B. Prometheus) angebunden werden.
-- Alternative Agents sind jederzeit einbindbar.
+- Alternative Agents sind jederzeit einbindbar (Open Telemetry - https://opentelemetry.io/).
 - EMF und QVT bieten eine Introspektion über ihre Diagnostics. Diese können bei Bedarf über JMX ebenfalls der externen Überwachung ausgeleitet werden.
-- OSGi Anwendungen bieten über ihre Runtime-Services ebenfalls Mögliuchkeiten der Introspection bspw. in Web / REST Anwendungen, internen Message-Bus oder Service / Component Regsistry
+- OSGi Anwendungen bieten über ihre Runtime-Services ebenfalls Mögliuchkeiten der Introspection bspw. in Web / REST Anwendungen, internen Message-Bus oder Service / Component Registry
+- 
 
 **43. Standard Solutions Before Custom Development**
 
