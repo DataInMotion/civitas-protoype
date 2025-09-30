@@ -17,6 +17,8 @@ Als Grundlage diente das bereitgestellte *docker-compose* Setup mit
 * Postgres
 * Mosquitto
 
+Eine Liste der verwendeten Open Source Bibliotheken finden sich in der [Repositories.md](Repositories.md) 
+
 ## Stellungnahme Kriterienkatalog
 
 Auf Basis der definierten Anforderungen aus obigen Link wurde eine [Stellungnahme zu den Anforderung an den Prototyp](Anforderungen-Prototyp.md) erstellt. Sie beschreibt die Beweggründe diese Technologie zu wählen.
@@ -90,7 +92,9 @@ Ziel unserer Architektur ist ein maximal integrativer Ansatz, wobei möglichst d
 
 In der Vergangenheit sind unser Anforderungen an einen alternative Verwendung in die Bibliotheken aufgenommen worden, sodass sie nahtlos mit unseren Wrappern funktionieren.
 
-Kommt eine Verwendung von OSGi nicht in Betracht, würde man auf die originalen Billiotheken zurückgreifen und ggfs. eine Konfigurationsschicht einziehen. 
+Kommt eine Verwendung von OSGi nicht in Betracht, würde man auf die originalen Bibliotheken zurückgreifen und ggfs. eine Konfigurationsschicht einziehen. 
+
+Wie bereits kommuniziert befinden sich die meisten Projekte aus der Github Organisation [geckoprojects-org](https://github.com/geckoprojects-org/) in der Übergabe an die Eclipse Foundation Project [Fennec](https://projects.eclipse.org/projects/modeling.fennec) (Github: [https://github.com/eclipse-fennec](https://github.com/eclipse-fennec)).
 
 ## Allgemeine Data-Sources und Data-Sinks
 

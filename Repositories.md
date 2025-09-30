@@ -1,0 +1,16 @@
+# Repositories
+
++ Prototype Repo - [org.gecko.civitas](https://github.com/geckoprojects-org/org.gecko.civitas)
++ [Eclipse EMF](https://github.com/eclipse-emf/org.eclipse.emf)
++ [Eclipse OCL](https://github.com/eclipse-ocl)
++ [Eclipse QVT](https://github.com/eclipse-qvto)
++ [Eclipse Eclipselink](https://github.com/eclipse-ee4j/eclipselink)
++ [Eclipse Jersey](https://github.com/eclipse-ee4j/jersey)
++ [Eclipse OSGi Technology JakartaRest](https://github.com/eclipse-osgi-technology/jakartarest-osgi)
++ EMF OSGI Wrapper - [org.gecko.emf](https://github.com/geckoprojects-org/org.gecko.emf/tree/snapshot)
++ EMF Persistence - [fennec-persistence](https://github.com/geckoprojects-org/fennec-persistence/tree/develop)
++ De-/Serialization using Jackson - [org.gecko.codec](https://github.com/geckoprojects-org/org.gecko.codec/tree/jsonschema)
++ EMF Utils - [org.gecko.emf.util](https://github.com/geckoprojects-org/org.gecko.emf.utils/tree/snapshot)
++ OSGi Messaging Adapter - [org.gecko.messaging](https://github.com/geckoprojects-org/org.gecko.messaging/tree/main)
++ OSGi QVT Adapter - [org.gecko.qvt](https://github.com/geckoprojects-org/org.gecko.qvto/tree/snapshot)
++ OSGi / EMF Adapters Camel, Minio, Kafka - [org.gecko.camel](https://github.com/geckoprojects-org/org.gecko.camel)
