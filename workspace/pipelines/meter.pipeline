@@ -61,5 +61,5 @@
     <incomingReferenceUri href="https://civitas.org/meter/target/1.0.0#//Plant/meteringPoints"/>
   </steps>
   <steps xsi:type="datasinkconfig:EMFRepositoryDataSinkConfig" pid="plantDataSink" id="plantDataSink" inputs="plantQVT" repoTarget="(repo_id=plantTarget)" detailedLogging="true"/>
-  <components xsi:type="minioconfig:MinIOClientConfig" pid="minio" accessKey="minio" secretKey="minio123"/>
+  <components xsi:type="minioconfig:MinIOClientConfig" pid="minio" endpoint="http://minio:9000" accessKey="minio" secretKey="minio123"/>
 </pipeline:Pipeline>
